@@ -56,13 +56,13 @@ As you can see, we can use a switch statement to conditionally tell what thread 
 ### Useful Addons
 You can use `WorkerGroup.onNewMessage` inside of init to handle what happens when a worker sends the command, `WorkerGroup.sendToMain`
 
- > handler task functions
+ ***handler task functions***
  WorkerGroup.onNewMessage -> Handles new messages sent from worker tasks.
     : Usage: `WorkerGroup.onNewMessage = function(...args) {...}`
  WorkerGroup.setShareData(*key*, *value*) -> Sets a value for all the threads running.
     : Usage: `WorkerGroup.setShareData('time', new Date(Date.now()))`;
 
- > worker task functions/variables
+ ***worker task functions/variables***
  WorkerGroup.workerId -> Returns the ID of the worker in question
     : Usage: `console.log(WorkerGroup.workerId);`
  WorkerGroup.sendToMain(*data*) -> Sends a message to the handler task.
